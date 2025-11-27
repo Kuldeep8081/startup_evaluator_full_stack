@@ -14,11 +14,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import styles from '../styles'
 
-import { IDEAS_KEY } from '@env';
-import { VOTES_KEY_PREFIX } from '@env';
 import Topview from './Topview';
 
-
+const IDEAS_KEY='startup_ideas_list';
+const VOTES_KEY_PREFIX=process.env.VOTES_KEY_PREFIX;
 
 export default function IdeasScreen({ navigation }) {
   const [ideas, setIdeas] = useState([]);

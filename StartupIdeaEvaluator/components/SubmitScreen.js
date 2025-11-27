@@ -15,7 +15,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import styles from '../styles'
 
-import { IDEAS_KEY } from '@env';
+const IDEAS_KEY='startup_ideas_list';
 import Topview from './Topview';
 
 function generateId() {

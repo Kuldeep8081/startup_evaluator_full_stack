@@ -52,7 +52,7 @@ export default function LoginScreen() {
 
     try {
       const response = await axios.post(
-        `${API_URL}/api/auth/login`,
+        `${process.env.EXPO_PUBLIC_API_URL}/api/auth/login`,
         userData
       );
 
@@ -117,7 +117,7 @@ export default function LoginScreen() {
           {/* Password Input */}
           <View style={styles.inputContainer}>
             <View style={styles.inputBox}>
-              <AntDesign name="lock1" size={24} color="gray" />
+              <AntDesign name="lock" size={24} color="black" />
               <TextInput
                 value={password}
                 onChangeText={setPassword}

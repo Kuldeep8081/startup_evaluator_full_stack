@@ -11,7 +11,8 @@ import {
   ScrollView
 } from "react-native";
 import React, { useState } from "react";
-import { MaterialIcons, AntDesign, Ionicons } from "@expo/vector-icons";
+import { MaterialIcons,Ionicons } from "@expo/vector-icons";
+import AntDesign from '@expo/vector-icons/AntDesign';
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -34,7 +35,7 @@ export default function RegisterScreen() {
 
     try {
       const response = await axios.post(
-        `${API_URL}/api/auth/register`,
+        `${process.env.EXPO_PUBLIC_API_URL}/api/auth/register`,
         { name, email, password }
       );
 
@@ -111,7 +112,7 @@ export default function RegisterScreen() {
           {/* Password Input */}
           <View style={styles.inputContainer}>
             <View style={styles.inputBox}>
-              <AntDesign name="lock1" size={24} color="gray" />
+              <AntDesign name="lock" size={24} color="black" />
               <TextInput
                 value={password}
                 onChangeText={setPassword}
