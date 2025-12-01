@@ -67,18 +67,27 @@ Expo CLI installed (npm install -g expo-cli)
 Git
 ## Installation
 # Clone the repository
+```
 git clone [https://github.com/Kuldeep8081/startup_evaluator_full_stack.git](https://github.com/Kuldeep8081/startup_evaluator_full_stack.git)
 cd startup_evaluator_full_stack
+```
 ## Install Dependencies
+```
 npm install
 or
 yarn install
+```
 ## Environment Setup
+```
 Create a .env file in the root directory and add your API keys:
 API_URL=http://your-backend-ip:port
 AI_API_KEY=your_api_key_here
+```
 ## Run the App
+```
 npx expo start
+```
+
 
 
 
